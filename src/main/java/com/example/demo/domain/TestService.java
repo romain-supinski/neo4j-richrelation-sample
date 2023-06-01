@@ -34,6 +34,7 @@ public class TestService {
             final SortedSet<CRelation> cList = new TreeSet<>();
             for (int j = 0; j < 3; j++) {
                 final CEntity cEntity = new CEntity();
+                cEntity.setName(String.format("test-%s-%s", i, j));
                 cRepository.save(cEntity);
                 final CRelation cRel = new CRelation();
                 cRel.setTarget(cEntity);
